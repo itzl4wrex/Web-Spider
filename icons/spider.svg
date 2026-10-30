@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="leg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff2e88"/><stop offset=".52" stop-color="#70baff"/><stop offset="1" stop-color="#39ff88"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <g fill="none" stroke="url(#leg)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m49 48-14-14-15 2M45 57 27 52 17 61M45 69 27 76 20 91M51 79 39 96l-4 13"/>
+    <path d="m79 48 14-14 15 2M83 57l18-5 10 9M83 69l18 7 7 15M77 79l12 17 4 13"/>
+  </g>
+  <g fill="#ffd400" stroke="#10131c" stroke-width="2"><circle cx="35" cy="34" r="4"/><circle cx="27" cy="52" r="4"/><circle cx="27" cy="76" r="4"/><circle cx="39" cy="96" r="4"/><circle cx="93" cy="34" r="4"/><circle cx="101" cy="52" r="4"/><circle cx="101" cy="76" r="4"/><circle cx="89" cy="96" r="4"/></g>
+  <ellipse cx="64" cy="65" rx="15" ry="20" fill="#080b13" stroke="#f4f7ff" stroke-width="2.5"/>
+  <ellipse cx="64" cy="84" rx="9" ry="11" fill="#101827" stroke="#3aa0ff" stroke-width="2.5"/>
+  <ellipse cx="64" cy="59" rx="7" ry="7" fill="#ff2e88" filter="url(#soft)"/>
+  <ellipse cx="64" cy="59" rx="5" ry="5" fill="#ff2e88" stroke="#fff" stroke-width="1.5"/>
+  <path d="m59 47-5-8m15 8 5-8" stroke="#ffd400" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="53.5" cy="38.5" r="2" fill="#fff"/><circle cx="74.5" cy="38.5" r="2" fill="#fff"/>
+</svg>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="popup.css">
+  <title>WEB SPIDER</title>
+</head>
+<body>
+  <header class="topbar">
+    <img class="brand-icon" src="../icons/spider.svg" alt="">
+    <div class="brand"><b>WEB SPIDER</b><small>FIELD EXPLORER <span>·</span> 1.0</small></div>
+    <span id="state" class="pill">READY</span>
+  </header>
+  <main>
+    <section class="site-card">
+      <div class="site-glyph">◎</div>
+      <div class="site-copy"><small>ACTIVE WEBSITE</small><strong id="site">Open a web page to begin</strong></div>
+    </section>
+
+    <section class="section-heading"><div><span class="eyebrow">01 / SCAN SETUP</span><h1>Choose your crawl</h1></div></section>
+    <section class="settings-card">
+      <label class="field-label" for="mode">CRAWL MODE</label>
+      <select id="mode"><option value="deep" selected>Deep crawl · follow pages recursively</option><option value="internal">Internal crawl · one level deep</option><option value="current">Current page · scan this page only</option></select>
+      <div class="field-grid">
+        <label>MAX PAGES<input id="maxPages" type="number" min="0" max="10000" value="0"><small>0 = unlimited</small></label>
+        <label>MAX DEPTH<input id="maxDepth" type="number" min="0" max="100" value="0"><small>0 = unlimited</small></label>
+        <label>DELAY<input id="delay" type="number" min="1" max="60" value="2"><small>seconds per page</small></label>
+      </div>
+      <details class="patterns"><summary>URL filters <span>Optional</span></summary>
+        <label>INCLUDE ONLY (one regular expression per line)<input id="include" placeholder="Example: /blog/ or /products?/"></label>
+        <label>EXCLUDE (one regular expression per line)<input id="exclude" placeholder="Example: /login or /cart"></label>
+      </details>
+    </section>
+
+    <section class="actions" aria-label="Crawl controls">
+      <button class="primary" id="start"><span class="play-icon">▶</span> START EXPLORING</button>
+      <div class="action-grid"><button id="pause">Ⅱ &nbsp; PAUSE</button><button id="resume">▶ &nbsp; RESUME</button><button id="stop">■ &nbsp; STOP</button><button id="export">↧ &nbsp; EXPORT</button></div>
+    </section>
+
+    <section class="visual-settings">
+      <div class="setting-title"><span class="eyebrow">SPIDER BEHAVIOR</span><span class="setting-hint">Visual only · collection runs independently</span></div>
+      <div class="toggle-grid">
+        <label class="toggle"><input type="checkbox" id="visual" checked><span class="switch"></span><span>Spider animation</span></label>
+        <label class="toggle"><input type="checkbox" id="follow" checked><span class="switch"></span><span>Mouse follow</span></label>
+        <label class="toggle"><input type="checkbox" id="auto"><span class="switch"></span><span>Autonomous walk</span></label>
+      </div>
+    </section>
+
+    <section class="stats-wrap">
+      <div class="section-row"><span class="eyebrow">LIVE COLLECTION</span><span id="pct" class="progress-label">0%</span></div>
+      <div class="progress"><div id="bar"></div></div>
+      <div class="stats">
+        <div class="stat"><b id="scanned">0</b><small>SCANNED</small></div>
+        <div class="stat"><b id="found">0</b><small>FOUND</small></div>
+        <div class="stat"><b id="links">0</b><small>LINKS</small></div>
+        <div class="stat"><b id="images">0</b><small>IMAGES</small></div>
+        <div class="stat"><b id="errors">0</b><small>ERRORS</small></div>
+      </div>
+    </section>
+
+    <section class="activity-card">
+      <div class="activity-title"><span class="live-dot"></span><span>SPIDER ACTIVITY</span></div>
+      <div id="activity">Waiting for you to start.</div>
+    </section>
+
+    <details class="data-panel" id="collected"><summary>Latest collected page <span>Preview</span></summary><div id="preview">No page data collected yet.</div></details>
+    <details class="data-panel"><summary>Recent scan log <span>History</span></summary><div id="logs"></div></details>
+    <button class="clear-data" id="clear">Delete collected data</button>
+    <footer>Stays on the starting website · respects robots.txt · saves one report when you export</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

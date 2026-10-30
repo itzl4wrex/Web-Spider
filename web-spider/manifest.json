@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "WEB SPIDER",
+  "version": "1.0.0",
+  "description": "A lightweight visual website explorer and report generator.",
+  "permissions": ["activeTab", "tabs", "scripting", "storage", "downloads"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background/service-worker.js" },
+  "action": { "default_title": "WEB SPIDER", "default_popup": "popup/popup.html" }
+}
