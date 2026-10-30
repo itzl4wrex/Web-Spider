@@ -53,7 +53,7 @@ Improve the way users interact with online information.
 🚀 Installation
 Clone this repository:
 bash
-git clone https://github.com/itzl4wrex/Web-Spider
+git clone https://github.com/itzl4wrex/Web-Spider.git
 
 Open your browser's extension management page.
 Enable Developer Mode.
