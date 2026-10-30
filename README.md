@@ -1,34 +1,77 @@
-# WEB SPIDER
+🕷️ Web Spider
+Lightweight Web Crawler & Information Extractor
 
-WEB SPIDER is a lightweight Chrome/Edge Manifest V3 extension that crawls the current HTTP(S) site, organizes useful page content, and writes one searchable HTML report named `WEB SPIDER.html` when you press **EXPORT**.
+The web is vast. Let Web Spider explore it.
 
-## Install
+Web Spider is a lightweight browser extension designed to make collecting information from websites simple, fast, and effortless.
 
-1. Open `chrome://extensions` in Chrome or `edge://extensions` in Edge.
-2. Turn on **Developer mode** and choose **Load unpacked**.
-3. Select this `web-spider` folder.
-4. Open a website and press **START** in the WEB SPIDER popup.
+It launches a crawler directly inside the currently opened webpage, scans its content, collects useful information, and presents the results in a clean, organized, and easy-to-understand format.
 
-The extension toolbar and popup use the custom neon spider icon. The popup groups crawl setup, spider behavior, live totals, and activity so the main controls are quick to find.
+No complicated setup. No unnecessary tools. Just open a webpage, launch Web Spider, and let it do the crawling.
 
-## Crawl controls
+✨ Features
+Instant Web Crawling: Launch a crawler directly on the currently active webpage.
+Information Collection: Scan webpage content and gather useful information.
+Simplified Results: Transform collected information into a clean and readable format.
+Lightweight Performance: Designed to be fast and efficient with minimal resource consumption.
+Simple Interface: Easy to use without unnecessary complexity.
+Browser Integration: Works directly within your browsing environment.
+Time-Saving: Reduce repetitive manual browsing and information collection.
+⚙️ How It Works
+Open: Navigate to the webpage you want to explore.
+Launch: Click the Web Spider extension icon.
+Crawl: The crawler runs directly inside the opened webpage.
+Collect: Gather useful information from the page.
+Simplify: View the collected information in an organized format.
+🎯 Use Cases
 
-- **Deep crawl** is the default. It recursively follows same-origin links.
-- **Internal crawl** follows links one level deep. **Current page** scans only the open tab.
-- Page and depth values of `0` mean unlimited. The deep crawl stays active after its link queue empties and checks the starting page for new links.
-- **EXPORT** stops the crawl and saves the collected pages to one `WEB SPIDER.html` file. Re-export overwrites that file. Closing or navigating the starting tab stops collection without downloading.
-- **PAUSE** freezes the spider in place and stops page collection; **RESUME** continues from the queued page. **STOP** ends collection. **DELETE COLLECTED DATA** clears saved crawl results. Exclude/include fields accept JavaScript regular expressions, one per line.
+Web Spider can be useful for:
 
-The report opens with scan totals and a page index. Each page shows its title, URL, and a short preview; expand **Read page details** for content grouped by headings, then open headings, links, images, tables, and metadata as needed. The report is searchable and includes contact details, errors, and discovered-but-unvisited URLs. Short stray text and common navigation elements are filtered out. Full page results are kept in local IndexedDB until deletion or the next crawl.
+Online research and information gathering.
+Exploring website content.
+Collecting useful webpage data.
+Simplifying information-heavy pages.
+Improving everyday browsing productivity.
+🕸️ Philosophy
 
-## Spider behavior
+Web Spider is built around three simple principles:
 
-The wireframe animation takes visual cues from [the WEB Crawler reference](https://fredfokan.github.io/web-crawler/). The spider stays dormant when the popup opens and appears only after **START**. Mouse-follow is enabled by default. Turning it off lets the spider choose targets across the full document, smoothly scroll off-screen targets into view, and keep walking between links, headings, and images. The legs walk in alternating pairs and lift as the body moves. Animation runs independently from collection, recovers its animation loop after a drawing error, and uses a pointer-transparent Canvas overlay. Re-injection replaces the previous renderer so extension reloads do not stack multiple spiders.
+Simplicity – Keep the experience straightforward.
+Speed – Make information collection quick.
+Efficiency – Stay lightweight without unnecessary features.
 
-## Permissions and crawl limits
+The goal is simple: make web information easier to collect and work with.
 
-The extension uses `activeTab`, `tabs`, and `scripting` to inspect the open page and visit discovered pages; `storage` for settings and live status; `downloads` to save the report; and `alarms` to resume a long crawl if the Manifest V3 worker sleeps. HTTP/HTTPS host access allows same-origin visits and `robots.txt` checks. The crawler stays on the starting origin, removes URL fragments, deduplicates links, and enforces at least a one-second delay. An explicit robots disallow is respected. It does not bypass login, CAPTCHAs, paywalls, or other access controls.
+🔒 Lightweight by Design
 
-## Development checks
+Web Spider is designed to operate directly within the currently opened webpage, avoiding the need for a separate crawling application or complicated workflow.
 
-Run `npm test` for URL, queue, and extraction tests. JavaScript syntax can be checked with `node --check`. Load the unpacked folder in Chrome or Edge for browser-level verification.
+📌 Project Goals
+Provide a simple web crawling experience.
+Make webpage information easier to collect.
+Keep the extension lightweight and efficient.
+Improve the way users interact with online information.
+🚀 Get Started
+Clone this repository:
+bash
+git clone 
+
+Open your browser's extension management page.
+Enable Developer Mode.
+Load the extension using the Load unpacked option.
+Open a webpage and start using Web Spider.
+🤝 Contributing
+
+Contributions, suggestions, bug reports, and feature requests are welcome!
+
+Feel free to open an issue or submit a pull request to help improve Web Spider.
+
+📄 License
+
+Add your preferred open-source license here.
+
+<p align="center">
+**Web Spider** 🕷️
+<br/>
+<i>One Click. One Crawler. Smarter Information Collection.</i>
+</p>
