@@ -76,12 +76,7 @@ Web Spider is designed to operate directly within the currently opened webpage, 
 
 ## 🚀 Installation
 
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/itzl4wrex/Web-Spider.git
-   ```
-
+1. Install the file from releases
 2. Open your browser's extension management page.
 3. Enable **Developer Mode**.
 4. Select **Load unpacked**.
