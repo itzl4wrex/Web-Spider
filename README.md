@@ -1,6 +1,5 @@
 🕷️ Web Spider
 Lightweight Web Crawler & Information Extractor
-
 The web is vast. Let Web Spider explore it.
 
 Web Spider is a lightweight browser extension designed to make collecting information from websites simple, fast, and effortless.
@@ -51,15 +50,16 @@ Provide a simple web crawling experience.
 Make webpage information easier to collect.
 Keep the extension lightweight and efficient.
 Improve the way users interact with online information.
-🚀 Get Started
+🚀 Installation
 Clone this repository:
 bash
-git clone 
+git clone https://github.com/itzl4wrex/Web-Spider
 
 Open your browser's extension management page.
 Enable Developer Mode.
-Load the extension using the Load unpacked option.
-Open a webpage and start using Web Spider.
+Select Load unpacked.
+Choose the Web Spider project folder.
+Open a webpage and start crawling!
 🤝 Contributing
 
 Contributions, suggestions, bug reports, and feature requests are welcome!
@@ -70,8 +70,10 @@ Feel free to open an issue or submit a pull request to help improve Web Spider.
 
 Add your preferred open-source license here.
 
-<p align="center">
-**Web Spider** 🕷️
-<br/>
-<i>One Click. One Crawler. Smarter Information Collection.</i>
-</p>
+<div align="center">
+
+🕷️ Web Spider
+
+One Click. One Crawler. Smarter Information Collection.
+
+</div>
